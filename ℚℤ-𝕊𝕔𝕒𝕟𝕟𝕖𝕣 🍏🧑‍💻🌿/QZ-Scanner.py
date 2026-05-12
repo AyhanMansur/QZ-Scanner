@@ -22,7 +22,7 @@ BANNER = f"""
 {RAND_COLOR}
 {OKGREEN}╔════════════════════════════════════════════════════════════════════════╗
 ║                    {BOLD}ℚℤ-𝕊𝕔𝕒𝕟𝕟𝕖𝕣 🍏🧑‍💻🌿💀{ENDC}{OKGREEN}                              ║
-║                  Advanced IP Range Scanner - Ayhan Mansur                   ║
+║                  IP Range Scanner -  Made by Ayhan Mansur                   ║
 ╚════════════════════════════════════════════════════════════════════════╝{ENDC}
 """
 
