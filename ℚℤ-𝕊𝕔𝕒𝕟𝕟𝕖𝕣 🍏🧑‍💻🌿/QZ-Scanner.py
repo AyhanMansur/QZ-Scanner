@@ -19,45 +19,53 @@ colors = [OKGREEN, LITBU, CYAN, PURPLE]
 RAND_COLOR = random.choice(colors)
 
 BANNER = f"""
-{RAND_COLOR}▄████  ███▄ ▄███▓ ▄▄▄       ██▓ ██▓     ██░ ██  ▄▄▄       ▄████▄   ██ ▄█▀
-██▒ ▀█▒▓██▒▀█▀ ██▒▒████▄    ▓██▒▓██▒    ▓██░ ██▒▒████▄    ▒██▀ ▀█   ██▄█▒
-▒██░▄▄▄░▓██    ▓██░▒██  ▀█▄  ▒██▒▒██░    ▒██▀▀██░▒██  ▀█▄  ▒▓█    ▄ ▓███▄░
-░▓█  ██▓▒██    ▒██ ░██▄▄▄▄██ ░██░▒██░    ░▓█ ░██ ░██▄▄▄▄██ ▒▓▓▄ ▄██▒▓██ █▄
-░▒▓███▀▒▒██▒   ░██▒ ▓█   ▓██▒░██░░██████▒░▓█▒░██▓ ▓█   ▓██▒▒ ▓███▀ ░▒██▒ █▄
- ░▒   ▒ ░ ▒░   ░  ░ ▒▒   ▓▒█░░▓  ░ ▒░▓  ░ ▒ ░░▒░▒ ▒▒   ▓▒█░░ ░▒ ▒  ░▒ ▒▒ ▓▒
-  ░   ░ ░  ░      ░  ▒   ▒▒ ░ ▒ ░░ ░ ▒  ░ ▒ ░▒░ ░  ▒   ▒▒ ░  ░  ▒   ░ ░▒ ▒░
-░ ░   ░ ░      ░     ░   ▒    ▒ ░  ░ ░    ░  ░░ ░  ░   ▒   ░        ░ ░░ ░
-      ░        ░         ░  ░ ░      ░  ░ ░  ░  ░      ░  ░░ ░      ░  ░
-{ENDC}
+{RAND_COLOR}
 {OKGREEN}╔════════════════════════════════════════════════════════════════════════╗
 ║                    {BOLD}ℚℤ-𝕊𝕔𝕒𝕟𝕟𝕖𝕣 🍏🧑‍💻🌿💀{ENDC}{OKGREEN}                              ║
 ║                  Advanced IP Range Scanner - Ayhan Mansur                   ║
 ╚════════════════════════════════════════════════════════════════════════╝{ENDC}
 """
 
+# 🔥 محدودیت حداکثر ۱۲۰,۰۰۰ آدرس
+SCAN_LIMIT = 120000
+
 # ================== SCANNER FUNCTIONS ==================
 def scan_host(ip):
     param = '-n' if sys.platform.startswith('win') else '-c'
-    result = subprocess.run(['ping', param, '1', str(ip)],
-                            capture_output=True, text=True)
-    return result.returncode == 0
+    try:
+        result = subprocess.run(['ping', param, '1', str(ip)],
+                                capture_output=True, text=True, timeout=2)
+        return result.returncode == 0
+    except:
+        return False
 
-def scan_network(network_str):
+def scan_network(network_str, scanned_so_far):
+    """اسکن یک محدوده با رعایت محدودیت"""
     try:
         network = ip_network(network_str, strict=False)
+        
+        # محاسبه تعداد آدرس‌هایی که هنوز می‌توانیم اسکن کنیم
+        remaining = SCAN_LIMIT - scanned_so_far
+        
+        # اگر محدوده بزرگتر از باقی‌مانده است، فقط تا سقف اسکن کن
+        addresses = list(network.hosts())
+        if len(addresses) > remaining:
+            addresses = addresses[:remaining]
+            print(f"{WARNING}⚠️ Limit reached: scanning only {remaining} of {len(network.hosts())} addresses in {network_str}{ENDC}")
+        
         color = random.choice(colors)
-        print(f"{color}🔍 Scanning {network_str} ({network.num_addresses} addresses)...{ENDC}")
+        print(f"{color}🔍 Scanning {network_str} ({len(addresses)} addresses, total scanned so far: {scanned_so_far + len(addresses)}/{SCAN_LIMIT})...{ENDC}")
 
-        hosts = list(network.hosts())
         active_hosts = []
-        for ip in hosts:
+        for ip in addresses:
             if scan_host(ip):
                 active_hosts.append(str(ip))
                 print(f"{OKGREEN}   ✅ {ip} is active{ENDC}")
-        return active_hosts
+        
+        return active_hosts, len(addresses)
     except Exception as e:
         print(f"{FAIL}❌ Error in range {network_str}: {e}{ENDC}")
-        return []
+        return [], 0
 
 # ================== MAIN ==================
 def main():
@@ -92,15 +100,26 @@ def main():
         sys.exit(1)
 
     print(f"{OKGREEN}✅ Downloaded {len(ranges)} IP ranges.{ENDC}")
+    print(f"{WARNING}⚠️ Scan limit: {SCAN_LIMIT} addresses{ENDC}")
     print(f"{LITBU}🚀 Starting scan...{ENDC}\n")
 
     all_active = []
+    scanned_so_far = 0
+    processed_ranges = 0
+
     for r in ranges:
-        all_active.extend(scan_network(r))
+        if scanned_so_far >= SCAN_LIMIT:
+            print(f"{WARNING}⚠️ Scan limit reached ({SCAN_LIMIT} addresses). Stopping...{ENDC}")
+            break
+        processed_ranges += 1
+        active, scanned = scan_network(r, scanned_so_far)
+        all_active.extend(active)
+        scanned_so_far += scanned
 
     print(f"\n{BOLD}{OKGREEN}📊 Final Summary:{ENDC}")
-    print(f"{CYAN}   ➤ Ranges scanned: {len(ranges)}{ENDC}")
-    print(f"{OKGREEN}   ➤ Active hosts: {len(all_active)}{ENDC}")
+    print(f"{CYAN}   ➤ IP ranges processed: {processed_ranges}{ENDC}")
+    print(f"{CYAN}   ➤ Addresses scanned: {scanned_so_far}{ENDC}")
+    print(f"{OKGREEN}   ➤ Active hosts found: {len(all_active)}{ENDC}")
     if all_active:
         print(f"\n{YELLOW}📝 List of active IPs:{ENDC}")
         for ip in all_active:
