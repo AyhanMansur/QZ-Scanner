@@ -1,5 +1,5 @@
 
-# 𝕋𝕙𝕚𝕤 𝕒 ℂ𝕠𝕠𝕝 𝕋𝕠𝕠𝕝 𝔽𝕠𝕣 𝕋𝕖𝕣𝕞𝕦𝕩 𝕒𝕟𝕕 𝕃𝕚𝕟𝕦𝕩 𝕊𝕔𝕒𝕟𝕤 ℝ𝕒𝕟𝕘𝕖 𝕚𝕡𝕤 𝕗𝕣𝕠𝕞 ℂ𝕝𝕠𝕦𝕕 𝕗𝕝𝕒𝕣𝕖 𝔸𝕣𝕧𝕒𝕟𝕔𝕝𝕠𝕦𝕕 𝕠𝕣 𝔸𝕡𝕡𝕝𝕖 𝕣𝕒𝕟𝕘𝕖𝕤🍏
+# QZ-Scanner🍏
 <div align="center">
 
 [![Status](https://img.shields.io/badge/Status-Active-brightgreen)](https://github.com/AyhanMansur/dowinb)
