@@ -1,5 +1,5 @@
 
-# QZ-Scanner🍏
+# ℚℤ-𝕊𝕔𝕒𝕟𝕟𝕖𝕣🍏🧑‍💻🌿💀
 <div align="center">
 
 [![Status](https://img.shields.io/badge/Status-Active-brightgreen)](https://github.com/AyhanMansur/dowinb)
