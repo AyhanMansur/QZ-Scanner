@@ -16,8 +16,6 @@ PURPLE = '\033[95m'
 BOLD = '\033[1m'
 
 colors = [OKGREEN, LITBU, CYAN, PURPLE]
-RAND_COLOR = random.choice(colors)
-
 BANNER = f"""
 {RAND_COLOR}
 {OKGREEN}╔════════════════════════════════════════════════════════════════════════╗
