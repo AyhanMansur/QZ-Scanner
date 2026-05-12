@@ -4,21 +4,23 @@ import random
 import requests
 from ipaddress import ip_network
 
-# کدهای رنگی
-OKGREEN = '\033[92m'
-WARNING = '\033[93m'
-FAIL = '\033[91m'
-ENDC = '\033[0m'
-LITBU = '\033[94m'
-YELLOW = '\033[93m'
-CYAN = '\033[96m'
-PURPLE = '\033[95m'
-BOLD = '\033[1m'
+# ================== DEFINITION OF COLOR CODES ==================
+# تمام این متغیرها باید قبل از استفاده تعریف شوند
+OKGREEN = '\033[92m'   # سبز برای پیام‌های موفقیت
+WARNING = '\033[93m'    # زرد برای هشدارها (این همان متغیری بود که خطا می‌داد)
+FAIL = '\033[91m'       # قرمز برای خطاها
+ENDC = '\033[0m'        # برای بازنشانی رنگ به حالت عادی
+LITBU = '\033[94m'      # آبی روشن
+YELLOW = '\033[93m'     # زرد
+CYAN = '\033[96m'       # فیروزه‌ای
+PURPLE = '\033[95m'     # بنفش
+BOLD = '\033[1m'        # پررنگ
+DEFAULT = '\033[0m'     # همان ENDC
 
 colors = [OKGREEN, LITBU, CYAN, PURPLE]
 
 def print_banner():
-    """چاپ بنر بدون استفاده از f-string طولانی"""
+    """چاپ بنر به صورت خط به خط برای جلوگیری از خطاهای f-string"""
     print()
     print(random.choice(colors) + "▄████  ███▄ ▄███▓ ▄▄▄       ██▓ ██▓     ██░ ██  ▄▄▄       ▄████▄   ██ ▄█▀" + ENDC)
     print(random.choice(colors) + "██▒ ▀█▒▓██▒▀█▀ ██▒▒████▄    ▓██▒▓██▒    ▓██░ ██▒▒████▄    ▒██▀ ▀█   ██▄█▒" + ENDC)
@@ -32,8 +34,9 @@ def print_banner():
     print(OKGREEN + "╔════════════════════════════════════════════════════════════════════════╗" + ENDC)
     print(OKGREEN + "║                    " + BOLD + "ℚℤ-𝕊𝕔𝕒𝕟𝕟𝕖𝕣 🍏🧑‍💻🌿💀" + ENDC + OKGREEN + "                              ║" + ENDC)
     print(OKGREEN + "║                  Advanced IP Range Scanner - Ayhan Mansur                   ║" + ENDC)
-    print(OKGREEN + "╚════════════════════════════════════════════════════════════════════════╝" + ENDC + ENDC)
+    print(OKGREEN + "╚════════════════════════════════════════════════════════════════════════╝" + ENDC)
 
+# ================== SETTINGS ==================
 SCAN_LIMIT = 120000
 
 def scan_host(ip):
@@ -77,10 +80,10 @@ def main():
     # پرسش شروع اسکن
     start_choice = input(CYAN + "❓ Do you want to start scan? [Y/n]: " + ENDC).strip().lower()
     if start_choice == 'n':
-        print(YELLOW + "🚫 Scan cancelled by user." + ENDC)
+        print(WARNING + "🚫 Scan cancelled by user." + ENDC)
         sys.exit(0)
     
-    # لینک مستقیم فایل
+    # لینک مستقیم فایل در گیت‌هاب
     url = "https://raw.githubusercontent.com/AyhanMansur/QZ-Scanner/refs/heads/main/%E2%84%9A%E2%84%A4-%F0%9D%95%8A%F0%9D%95%94%F0%9D%95%92%F0%9D%95%9F%F0%9D%95%9F%F0%9D%95%96%F0%9D%95%A3%20%F0%9F%8D%8F%F0%9F%A7%91%E2%80%8D%F0%9F%92%BB%F0%9F%8C%BF/Ranges.txt"
     
     print(LITBU + "📡 ℚℤ-𝕊𝕔𝕒𝕟𝕟𝕖𝕣 - Downloading range list from GitHub..." + ENDC)
@@ -104,7 +107,7 @@ def main():
         sys.exit(1)
     
     print(OKGREEN + "✅ Downloaded " + str(len(ranges)) + " IP ranges." + ENDC)
-    print(YELLOW + "⚠️ Scan limit: " + str(SCAN_LIMIT) + " addresses" + ENDC)
+    print(WARNING + "⚠️ Scan limit: " + str(SCAN_LIMIT) + " addresses" + ENDC)
     print(LITBU + "🚀 Starting scan..." + ENDC + "\n")
     
     all_active = []
@@ -126,7 +129,7 @@ def main():
     print(OKGREEN + "   ➤ Active hosts found: " + str(len(all_active)) + ENDC)
     
     if all_active:
-        print("\n" + YELLOW + "📝 List of active IPs:" + ENDC)
+        print("\n" + WARNING + "📝 List of active IPs:" + ENDC)
         for ip in all_active:
             print("   " + OKGREEN + "► " + ip + ENDC)
 
