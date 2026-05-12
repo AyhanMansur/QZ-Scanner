@@ -1,2 +1,39 @@
-# -
-This a Cool Tool For Termux and Linux  Scans Range ips from Cloud flare Arvancloud or  Apple ranges🍏 
+
+# 𝕋𝕙𝕚𝕤 𝕒 ℂ𝕠𝕠𝕝 𝕋𝕠𝕠𝕝 𝔽𝕠𝕣 𝕋𝕖𝕣𝕞𝕦𝕩 𝕒𝕟𝕕 𝕃𝕚𝕟𝕦𝕩 𝕊𝕔𝕒𝕟𝕤 ℝ𝕒𝕟𝕘𝕖 𝕚𝕡𝕤 𝕗𝕣𝕠𝕞 ℂ𝕝𝕠𝕦𝕕 𝕗𝕝𝕒𝕣𝕖 𝔸𝕣𝕧𝕒𝕟𝕔𝕝𝕠𝕦𝕕 𝕠𝕣 𝔸𝕡𝕡𝕝𝕖 𝕣𝕒𝕟𝕘𝕖𝕤🍏
+<div align="center">
+
+[![Status](https://img.shields.io/badge/Status-Active-brightgreen)](https://github.com/AyhanMansur/dowinb)
+[![Platform](https://img.shields.io/badge/Platform-Termux%20%7C%20VPS%20%7C%20Linux-blue)](https://github.com/AyhanMansur/dowinb)
+
+> **Transform boring Range ips scanners to  `ℂ𝕠𝕠𝕝 𝕃𝕚𝕟𝕦𝕩|𝕋𝕙𝕖𝕞𝕖𝕕☘️🆒🏁`faster experience.**
+> 🚀 **Zero delay ** | 🎨 **Cyberpunk UI** | 📱 **Mobile Optimized**
+  <i>A lightweight, cross-platform utility for  scan every simple range ips.</i>
+</div>
+
+---
+
+## 📋 Overview
+
+**WireGuard-Generator** is a high-performance Python utility designed to generate secure, single-peer WireGuard configurations with dynamic IP masking. 
+
+This tool simplifies the process of creating privacy-focused tunnels by automatically selecting endpoints from trusted, high-performance IP ranges (such as **ArvanCloud** and **Cloudflare**). This effectively obfuscates traffic, making your tunnel traffic appear as standard HTTPS traffic to bypass restrictions and enhance anonymity.
+
+## ✨ Key Features
+- ⚡ **Optimized Performance**: 🧑‍💻🌿Range ip scanner .
+- 📱 **Cross-Platform**: Fully compatible with **Linux** (Ubuntu/Debian) and **Android** (Termux).
+- 📦 **Zero Dependencies**: Relies solely on standard Python libraries and system
+
+## 🛠️ Installation & Usage
+
+### Prerequisites
+- **Python 3.6+**
+- **Sys** installed on the host system.
+- Important Notes for Termux:
+### Step 1: Install sys libraries 
+**For Android (Termux):**
+```bash
+pkg install python
+
+curl -O https://raw.githubusercontent.com/AyhanMansur/Wiregurd-Generator-Termux/refs/heads/main/WGAyhan.py
+
+python3 WGAyhan.py
