@@ -1,0 +1,10 @@
+#
+google.com
+python.org
+code.visualstudio.com
+github.com
+linuxmint.com
+www.youtube.com
+meet.google.com
+tasks.google.com
+ubuntu.com
