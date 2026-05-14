@@ -8,3 +8,6 @@ www.youtube.com
 meet.google.com
 tasks.google.com
 ubuntu.com
+figma.com
+translate.google.com
+chat.deepseek.com
