@@ -1,4 +1,4 @@
-#
+#white listed Domains on Iran
 google.com
 python.org
 code.visualstudio.com
@@ -11,3 +11,4 @@ ubuntu.com
 figma.com
 translate.google.com
 chat.deepseek.com
+drive.google.com
