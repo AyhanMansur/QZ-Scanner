@@ -16,7 +16,7 @@ RAND_COLOR = random.choice(colors)
 BANNER = f"""
 {RAND_COLOR}
 {OKGREEN}╔════════════════════════════════════════════════════════════════════════╗
-║                    {BOLD}ℚℤ-𝕊𝕔𝕒𝕟𝕟𝕖𝕣 🍏🧑‍💻🌿💀{ENDC}{OKGREEN}                              ║
+║                    {BOLD}𝔸𝕪𝕙𝕒𝕟𝕏-𝔽𝕣𝕖𝕕𝕠𝕞-𝕊𝕔𝕒𝕟𝕟𝕖𝕣-🧑‍💻🌿💀{ENDC}{OKGREEN}                              ║
 ║                  Advanced IP Range Scanner - Ayhan Mansur                   ║
 ╚════════════════════════════════════════════════════════════════════════╝{ENDC}
 """
@@ -82,7 +82,7 @@ def main():
         print(f"{FAIL}❌ No IP ranges provided. Exiting.{ENDC}")
         sys.exit(1)
     
-    print(f"{LITBU}📡 ℚℤ-𝕊𝕔𝕒𝕟𝕟𝕖𝕣 - Reading {len(ranges)} range(s){ENDC}")
+    print(f"{LITBU}📡 𝔸𝕪𝕙𝕒𝕟𝕏-𝔽𝕣𝕖𝕕𝕠𝕞-𝕊𝕔𝕒𝕟𝕟𝕖𝕣 - Reading {len(ranges)} range(s){ENDC}")
     
     all_active = []
     for r in ranges:

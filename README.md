@@ -1,5 +1,5 @@
 
-# ℚℤ-𝕊𝕔𝕒𝕟𝕟𝕖𝕣🍏🧑‍💻🌿💀
+# 𝔸𝕪𝕙𝕒𝕟𝕏-𝔽𝕣𝕖𝕕𝕠𝕞-𝕊𝕔𝕒𝕟𝕟𝕖𝕣-🧑‍💻🌿
 <div align="center">
 
 [![Status](https://img.shields.io/badge/Status-Active-brightgreen)](https://github.com/AyhanMansur/dowinb)
@@ -14,7 +14,7 @@
 
 ## 📋 Overview
 
-**ℚℤ-𝕊𝕔𝕒𝕟𝕟𝕖𝕣🍏🧑‍💻🌿💀** is a high-performance Python utility designed to scan the secure, range ips
+**𝔸𝕪𝕙𝕒𝕟𝕏-𝔽𝕣𝕖𝕕𝕠𝕞-𝕊𝕔𝕒𝕟𝕟𝕖𝕣-🧑‍💻🌿** is a high-performance Python utility designed to scan the secure, range ips
 
 This tool simplifies the process of creating privacy-focused tunnels by automatically selecting endpoints from trusted, high-performance IP ranges (such as **ArvanCloud** and **Cloudflare**). This effectively obfuscates traffic, making your tunnel traffic appear as standard HTTPS traffic to bypass restrictions and enhance anonymity.
 
