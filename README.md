@@ -1,39 +1,41 @@
-
 # 𝔸𝕪𝕙𝕒𝕟𝕏-𝔽𝕣𝕖𝕕𝕠𝕞-𝕊𝕔𝕒𝕟𝕟𝕖𝕣-🧑‍💻🌿
 <div align="center">
 
-[![Status](https://img.shields.io/badge/Status-Active-brightgreen)](https://github.com/AyhanMansur/dowinb)
-[![Platform](https://img.shields.io/badge/Platform-Termux%20%7C%20VPS%20%7C%20Linux-blue)](https://github.com/AyhanMansur/dowinb)
+[![وضعیت](https://img.shields.io/badge/Status-Active-brightgreen)](https://github.com/AyhanMansur/dowinb)
+[![پلتفرم](https://img.shields.io/badge/Platform-Termux%20%7C%20VPS%20%7C%20Linux-blue)](https://github.com/AyhanMansur/dowinb)
 
-> **Transform boring Range ips scanners to  `ℂ𝕠𝕠𝕝 𝕃𝕚𝕟𝕦𝕩|𝕋𝕙𝕖𝕞𝕖𝕕☘️🆒🏁` faster experience.**
-> 🚀 **Zero delay ** | 🎨 **Cyberpunk UI** | 📱 **Mobile Optimized**
-  <i>A lightweight, cross-platform utility for  scan every simple range ips.</i>
+> **محدوده خسته کننده را تبدیل کنید اسکنرهای IPS برای تجربه سریع‌تر «بازی‌های آنلاین» و «بازی‌های آنلاین»☘️🆒🏁.**
+> 🚀 **بدون تأخیر** | 🎨 **رابط کاربری سایبرپانک** | 📱 **بهینه‌شده برای موبایل**
+<i>یک ابزار سبک و چند پلتفرمی برای اسکن هر محدوده ساده IP.</i>
 </div>
 
 ---
 
-## 📋 Overview
+## 📋 مرور کلی
 
-**𝔸𝕪𝕙𝕒𝕟𝕏-𝔽𝕣𝕖𝕕𝕠𝕞-𝕊𝕔𝕒𝕟𝕟𝕖𝕣-🧑‍💻🌿** is a high-performance Python utility designed to scan the secure, range ips
+**🔸🕪𝕙𝕒𝕟𝕏-𝔽𝕣𝕖𝕕𝕠𝕞-𝕊𝕔𝕒𝕟𝕟𝕖𝕣-🧑‍💻🌿** یک ابزار پایتون با کارایی بالا است که برای اسکن IP های امن و محدوده‌ای طراحی شده است.
 
-This tool simplifies the process of creating privacy-focused tunnels by automatically selecting endpoints from trusted, high-performance IP ranges (such as **ArvanCloud** and **Cloudflare**). This effectively obfuscates traffic, making your tunnel traffic appear as standard HTTPS traffic to bypass restrictions and enhance anonymity.
+این ابزار با انتخاب خودکار نقاط پایانی از محدوده‌های IP قابل اعتماد و با کارایی بالا (مانند **ArvanCloud** و **Cloudflare**) فرآیند ایجاد تونل‌های متمرکز بر حریم خصوصی را ساده می‌کند. این امر به طور موثر ترافیک را مبهم می‌کند و باعث می‌شود ترافیک تونل شما به عنوان ترافیک استاندارد HTTPS به نظر برسد تا محدودیت‌ها را دور بزند و ناشناس بودن را افزایش دهد.
 
-## ✨ Key Features
-- ⚡ **Optimized Performance**: 🧑‍💻🌿Range ip scanner .
-- 📱 **Cross-Platform**: Fully compatible with **Linux** (Ubuntu/Debian) and **Android** (Termux).
-- 📦 **Zero Dependencies**: Relies solely on standard Python libraries and system
+## ✨ ویژگی‌های کلیدی
+- ⚡ **عملکرد بهینه**: 🧑‍💻🌿اسکنر آی‌پی محدوده.
 
-## 🛠️ Installation & Usage
+📱 **چندسکویی**: کاملاً سازگار با **لینوکس** (اوبونتو/دبیان) و **اندروید** (ترموکس).
 
-### Prerequisites
-- **Python 3.6+**
-- **Sys** installed on the host system.
-- Important Notes for Termux:
-### Step 1: Install sys libraries 
-**For Android (Termux):**
+📦 **بدون وابستگی**: صرفاً متکی بر کتابخانه‌ها و سیستم استاندارد پایتون
+
+## 🛠️ نصب و استفاده
+
+### پیش‌نیازها
+- **پایتون ۳.۶+**
+- **Sys** نصب شده روی سیستم میزبان.
+
+نکات مهم برای ترموکس:
+### مرحله ۱: نصب کتابخانه‌های sys
+**برای اندروید (ترموکس):**
 ```bash
 pkg install python
 
-curl -O https://raw.githubusercontent.com/AyhanMansur/AyhanX-Fredom-Scanner/refs/heads/main/%F0%9D%94%B8%F0%9D%95%AA%F0%9D%95%99%F0%9D%95%92%F0%9D%95%9F%F0%9D%95%8F-%F0%9D%94%BD%F0%9D%95%A3%F0%9D%95%96%F0%9D%95%95%F0%9D%95%A0%F0%9D%95%9E-%F0%9D%95%8A%F0%9D%95%94%F0%9D%95%92%F0%9D%95%9F%F0%9D%95%9F%F0%9D%95%96%F0%9D%95%A3-%F0%9F%A7%91%E2%80%8D%F0%9F%92%BB%F0%9F%8C%BF/AyhanX-FredomScanner.py
+curl -O https://raw.githubusercontent.com/AyhanMansur/AyhanX-Fredom-Scanner/refs/heads/main/%F0%9D%94%B8%F0%9D%95%AA%F0%9D%95%99%F0%9D%95%92%F0%9D%95%9F%F0%9D%95%8F-%F0%9D%94%BD%F0%9D%95%A3%F0%9D%95%96%F0 %9D%95%95%F0%9D%95%A0%F0%9D%95%9E-%F0%9D%95%8A%F0%9D%95%94%F0%9D%95%92%F0%9D%95%9F%F0%9D%95%9F %F0%9D%95%96%F0%9D%95%A3-%F0%9F%A7%91%E2%80%8D%F0%9F%92%BB%F0%9F%8C%BF/AyhanX-FredomScanner.py
 
 python3 AyhanX-FredomScanner.py
