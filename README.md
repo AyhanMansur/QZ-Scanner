@@ -5,7 +5,7 @@
 [![Status](https://img.shields.io/badge/Status-Active-brightgreen)](https://github.com/AyhanMansur/dowinb)
 [![Platform](https://img.shields.io/badge/Platform-Termux%20%7C%20VPS%20%7C%20Linux-blue)](https://github.com/AyhanMansur/dowinb)
 
-> **Transform boring Range ips scanners to  `ℂ𝕠𝕠𝕝 𝕃𝕚𝕟𝕦𝕩|𝕋𝕙𝕖𝕞𝕖𝕕☘️🆒🏁`faster experience.**
+> **Transform boring Range ips scanners to  `ℂ𝕠𝕠𝕝 𝕃𝕚𝕟𝕦𝕩|𝕋𝕙𝕖𝕞𝕖𝕕☘️🆒🏁` faster experience.**
 > 🚀 **Zero delay ** | 🎨 **Cyberpunk UI** | 📱 **Mobile Optimized**
   <i>A lightweight, cross-platform utility for  scan every simple range ips.</i>
 </div>
@@ -34,6 +34,6 @@ This tool simplifies the process of creating privacy-focused tunnels by automati
 ```bash
 pkg install python
 
-curl -O https://raw.githubusercontent.com/AyhanMansur/Wiregurd-Generator-Termux/refs/heads/main/WGAyhan.py
+curl -O https://raw.githubusercontent.com/AyhanMansur/QZ-Scanner/refs/heads/main/%E2%84%9A%E2%84%A4-%F0%9D%95%8A%F0%9D%95%94%F0%9D%95%92%F0%9D%95%9F%F0%9D%95%9F%F0%9D%95%96%F0%9D%95%A3%20%F0%9F%8D%8F%F0%9F%A7%91%E2%80%8D%F0%9F%92%BB%F0%9F%8C%BF/QZ-Scanner.py
 
-python3 WGAyhan.py
+python3 QZ-Scanner.py
